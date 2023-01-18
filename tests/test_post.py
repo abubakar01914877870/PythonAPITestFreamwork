@@ -45,9 +45,6 @@ class TestPostRequest:
             "email": util.faker.email(),
             "password": util.faker.password()
         }
-        response = requests.post(url=util.SITE_URL+'/post', json=data)
+        response = requests.post(url=util.SITE_URL + '/post', json=data)
         assert response.status_code == 200
         util.check_json_is_equals_to_dictionary(data, response.json()['json'])
-
-
-

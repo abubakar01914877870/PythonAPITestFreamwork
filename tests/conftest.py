@@ -1,12 +1,18 @@
 import pytest
 
 
-@pytest.fixture(autouse=True)
+@pytest.fixture
 def shared_variables():
+    """
+    This fixture hold all of shared variables.
+    SITE_URL: Domain url for test site
+    API_KEY: API key will go here and shared all test
+    """
     SITE_URL = "http://postman-echo.com"
     API_KEY = ""
     shared_variables = {'SITE_URL': SITE_URL, 'API_KEY': API_KEY}
     return shared_variables
+    
 
 
 def pytest_configure(config):

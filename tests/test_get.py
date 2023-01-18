@@ -2,7 +2,6 @@ import pytest
 import requests
 from util.Utilities import Utilities
 
-
 class TestGetRequest:
 
     @pytest.mark.get
