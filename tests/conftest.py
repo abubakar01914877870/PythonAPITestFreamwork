@@ -24,3 +24,9 @@ def pytest_configure(config):
                }
     for marker, description in markers.items():
         config.addinivalue_line("markers", f"{marker}: {description}")
+
+def pytest_html_report_title(report):
+    """
+    Test Report Title
+    """
+    report.title = "Simple API Test Report"
