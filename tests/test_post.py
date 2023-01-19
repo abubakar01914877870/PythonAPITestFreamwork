@@ -48,3 +48,5 @@ class TestPostRequest:
         response = requests.post(url=util.SITE_URL + '/post', json=data)
         assert response.status_code == 200
         util.check_json_is_equals_to_dictionary(data, response.json()['json'])
+
+
